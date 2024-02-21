@@ -6,6 +6,12 @@
             "type": "shell",
             "command": "scripts/develop",
             "problemMatcher": []
+        },
+        {
+            "label": "Import Bring Beta Branch",
+            "type": "shell",
+            "command": "scripts/import_beta_branch",
+            "problemMatcher": []
         }
     ]
 }
