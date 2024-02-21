@@ -1,5 +1,5 @@
 {
-    "name": "Bring Integration",
+    "name": "Bring",
     "filename": "bring.zip",
     "hide_default_branch": true,
     "homeassistant": "2024.2.0",
