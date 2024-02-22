@@ -1,0 +1,50 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Service is already configured"
+        },
+        "error": {
+            "cannot_connect": "Failed to connect",
+            "invalid_auth": "Invalid authentication",
+            "unknown": "Unexpected error"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "email": "Email",
+                    "password": "Password"
+                }
+            }
+        }
+    },
+    "selector": {
+        "notification_type_selector": {
+            "options": {
+                "changed_list": "List changed - Check it out",
+                "going_shopping": "I'm going shopping! - Last chance for adjustments",
+                "shopping_done": "Shopping done - you can relax",
+                "urgent_message": "Breaking news - Please get 'item name' !"
+            }
+        }
+    },
+    "services": {
+        "push_notification": {
+            "description": "Send a mobile push notification to members of a shared Bring! list.",
+            "fields": {
+                "entity_id": {
+                    "description": "Bring! list whose members (except sender) will be notified.",
+                    "name": "List"
+                },
+                "item_name": {
+                    "description": "Item Name to include in an urgent message e.g. 'Breaking news - Please get cilantro!'",
+                    "name": "Item name (Required if message type 'Breaking news' selected)"
+                },
+                "notification_type": {
+                    "description": "Type of push notification to send to list members.",
+                    "name": "Notification type"
+                }
+            },
+            "name": "Send a notification"
+        }
+    }
+}
