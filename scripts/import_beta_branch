@@ -2,12 +2,17 @@
 
 set -e
 
-if [ ! -d "${PWD}/ha-core" ] then
+if [ ! -d "${PWD}/ha-core" ]; then
 git clone --branch bring-beta https://github.com/tr4nt0r/ha-core.git "${PWD}/ha-core"
+
+git -C "${PWD}/ha-core" fetch 
+
+git -C "${PWD}/ha-core" switch -c bring-beta origin/bring-beta
+else 
+git -C "${PWD}/ha-core" fetch 
+
+git -C "${PWD}/ha-core" switch bring-beta
+git -C "${PWD}/ha-core" reset --hard HEAD
 fi
-
-git -C "${PWD}/ha-core" fetch
-
-git -C "${PWD}/ha-core" fetch switch -c bring-beta origin/bring-beta
 
 cp -r "${PWD}/ha-core/homeassistant/components/bring" "${PWD}/custom_components"
